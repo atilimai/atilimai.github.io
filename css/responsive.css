@@ -1,0 +1,449 @@
+/* Responsive Design and Media Queries */
+
+/* ============================================
+   BREAKPOINT DEFINITIONS
+   ============================================
+   Mobile: < 768px (default, mobile-first)
+   Tablet: 768px - 1023px
+   Desktop: >= 1024px
+   ============================================ */
+
+/* ============================================
+   MOBILE STYLES (Default - Mobile First)
+   < 768px
+   ============================================ */
+
+/* Mobile-specific adjustments */
+body {
+  font-size: 16px; /* Ensure minimum readable size on mobile */
+}
+
+/* Container padding for mobile - increased for touch-friendly interface */
+.container {
+  padding: var(--container-padding-mobile);
+}
+
+/* Logo - 200px on mobile as per requirements */
+.logo-container img {
+  max-width: 200px;
+}
+
+/* Social buttons - 2-column grid on mobile for better space utilization */
+.social-buttons {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+}
+
+/* Ensure touch-friendly spacing and minimum 44x44px touch targets */
+.social-btn {
+  min-height: 120px;
+  min-width: 44px; /* Minimum touch target width */
+  padding: var(--space-lg) var(--space-md);
+  /* Increased padding for better touch interaction */
+}
+
+/* About section mobile adjustments - increased padding */
+.about-content {
+  padding: var(--space-lg);
+}
+
+.about-toggle {
+  min-height: 44px; /* Minimum touch target */
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* Fixed buttons - ensure they meet 44x44px minimum and don't overlap */
+.theme-toggle {
+  width: 50px; /* Exceeds 44px minimum */
+  height: 50px; /* Exceeds 44px minimum */
+  top: 16px;
+  right: 16px;
+}
+
+.language-toggle {
+  width: 80px; /* Exceeds 44px minimum */
+  height: 44px; /* Ensure minimum touch target */
+  top: 16px;
+  left: 16px;
+}
+
+.lang-btn {
+  min-width: 40px; /* Ensure adequate touch target */
+  min-height: 44px;
+}
+
+/* Typography adjustments for mobile */
+.title {
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  text-align: center;
+  margin-bottom: var(--space-md);
+  padding: 0 var(--space-md); /* Prevent text from touching edges */
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 4vw, 1.125rem);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding: 0 var(--space-md); /* Prevent text from touching edges */
+}
+
+/* Increase spacing between sections for better mobile UX */
+.social-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.about-section {
+  margin-bottom: var(--space-2xl);
+}
+
+/* ============================================
+   TABLET STYLES
+   768px - 1023px
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Logo - scale up for tablet */
+  .logo-container img {
+    max-width: 250px;
+  }
+  
+  /* Social buttons - 2 columns on tablet */
+  .social-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  /* Increase button padding on tablet */
+  .social-btn {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  /* About section - more padding on tablet */
+  .about-content {
+    padding: var(--space-xl);
+  }
+  
+  /* Typography adjustments for tablet */
+  .title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+  
+  /* Fixed buttons - more spacing from edges */
+  .theme-toggle,
+  .language-toggle {
+    top: 20px;
+  }
+  
+  .theme-toggle {
+    right: 20px;
+  }
+  
+  .language-toggle {
+    left: 20px;
+  }
+}
+
+/* ============================================
+   DESKTOP STYLES
+   >= 1024px
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Container - use desktop padding */
+  .container {
+    padding: var(--container-padding-desktop);
+  }
+  
+  /* Logo - full size on desktop */
+  .logo-container img {
+    max-width: 300px;
+  }
+  
+  /* Social buttons - 4 columns on desktop */
+  .social-buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    max-width: 1000px;
+  }
+  
+  /* Desktop button styling */
+  .social-btn {
+    padding: var(--space-xl) var(--space-lg);
+    min-height: 140px;
+  }
+  
+  /* About section - maximum width and padding */
+  .about-section {
+    max-width: 900px;
+  }
+  
+  .about-content {
+    padding: var(--space-2xl);
+  }
+  
+  /* Typography - full size on desktop */
+  .title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+  }
+}
+
+/* ============================================
+   EXTRA SMALL MOBILE
+   < 375px (for very small devices)
+   ============================================ */
+
+@media (max-width: 374px) {
+  /* Reduce logo size on very small screens */
+  .logo-container img {
+    max-width: 160px;
+  }
+  
+  /* Reduce padding on very small screens */
+  .container {
+    padding: var(--space-md);
+  }
+  
+  /* Smaller fixed buttons */
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 12px;
+  }
+  
+  .language-toggle {
+    width: 72px;
+    height: 44px; /* Maintain minimum touch target */
+    top: 12px;
+    left: 12px;
+  }
+  
+  .theme-toggle .theme-icon {
+    font-size: 1.25rem;
+  }
+  
+  /* Reduce social button padding but maintain readability */
+  .social-btn {
+    padding: var(--space-md);
+    min-height: 100px;
+  }
+  
+  .social-btn .icon {
+    font-size: 1.5rem;
+  }
+  
+  .social-btn .label {
+    font-size: 0.875rem; /* Ensure readable text */
+  }
+  
+  /* Reduce about section padding but maintain readability */
+  .about-content {
+    padding: var(--space-md);
+  }
+  
+  /* Ensure text remains readable */
+  .about-content .intro-text,
+  .about-content .mission-text,
+  .about-content .goal-text,
+  .about-content .values-text,
+  .about-content .cta-text,
+  .about-content .activities-list li {
+    font-size: 0.875rem; /* Minimum readable size */
+    line-height: 1.6;
+  }
+  
+  .about-content .section-title {
+    font-size: 1.125rem; /* Proportionally smaller but still readable */
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP
+   >= 1440px (for large screens)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  /* Increase max-width for large screens */
+  .container {
+    max-width: 1400px;
+  }
+  
+  /* Larger social buttons grid */
+  .social-buttons {
+    max-width: 1200px;
+  }
+  
+  /* More generous spacing */
+  .about-section {
+    max-width: 1000px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   Mobile devices in landscape orientation
+   ============================================ */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  /* Reduce vertical spacing in landscape */
+  .logo-container {
+    min-height: 15vh;
+    padding: var(--space-lg) 0;
+  }
+  
+  /* Adjust logo size for landscape */
+  .logo-container img {
+    max-width: 150px;
+  }
+  
+  /* Reduce vertical margins */
+  .title {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .subtitle {
+    margin-bottom: var(--space-lg);
+  }
+  
+  /* Social buttons in 2 columns for landscape mobile */
+  .social-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  
+  .social-btn {
+    min-height: 100px;
+    padding: var(--space-md);
+  }
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Ensure all interactive elements meet minimum touch target size */
+  .social-btn,
+  .about-toggle,
+  .theme-toggle,
+  .lang-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Increase tap target padding */
+  .social-btn {
+    padding: var(--space-lg);
+  }
+  
+  /* Remove hover effects on touch devices */
+  .social-btn:hover,
+  .about-toggle:hover,
+  .theme-toggle:hover {
+    transform: none;
+  }
+  
+  /* Add active states for touch feedback */
+  .social-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .about-toggle:active,
+  .theme-toggle:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ============================================
+   HIGH RESOLUTION DISPLAYS
+   ============================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp rendering on retina displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ============================================
+   FLUID TYPOGRAPHY ENHANCEMENTS
+   Ensure text remains readable at all sizes
+   ============================================ */
+
+/* Base body text - always readable */
+body {
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+}
+
+/* Ensure minimum line height for readability */
+p, li, span {
+  line-height: 1.6;
+}
+
+/* Headings maintain proper hierarchy */
+h1 {
+  font-size: var(--font-size-title);
+  line-height: 1.2;
+}
+
+h2, h3 {
+  font-size: var(--font-size-section-title);
+  line-height: 1.3;
+}
+
+/* Button text always readable */
+button, .social-btn .label {
+  font-size: var(--font-size-button);
+}
+
+/* Small text never too small */
+small, .lang-btn {
+  font-size: var(--font-size-small);
+}
+
+/* Ensure adequate spacing for text blocks */
+p + p {
+  margin-top: var(--space-md);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  /* Hide interactive elements when printing */
+  .theme-toggle,
+  .language-toggle,
+  .background-effects,
+  .particles-container {
+    display: none !important;
+  }
+  
+  /* Optimize for print */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .social-btn {
+    break-inside: avoid;
+  }
+  
+  /* Show URLs for links */
+  .social-btn::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}

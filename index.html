@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atılım Yapay Zeka Topluluğu - Yapay zeka, makine öğrenmesi ve veri bilimi alanlarında öğrencileri bir araya getiren topluluk">
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#a855f7" media="(prefers-color-scheme: dark)">
+  
+  <title>Atılım Yapay Zeka Topluluğu</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="atilimai-light.png">
+  <link rel="preload" as="image" href="atilimai-dark.png">
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="language-toggle" role="group" aria-label="Language selection">
+    <button class="lang-btn active" data-lang="tr" aria-label="Switch to Turkish" aria-pressed="true" tabindex="0" role="button">TR</button>
+    <button class="lang-btn" data-lang="en" aria-label="Switch to English" aria-pressed="false" tabindex="0" role="button">EN</button>
+    <div class="lang-indicator" aria-hidden="true"></div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Switch to dark mode" tabindex="0" role="button">
+    <span class="theme-icon" aria-hidden="true">🌙</span>
+  </button>
+
+  <!-- Background Effects -->
+  <div class="background-effects">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="particles-container" id="particles"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Logo Section -->
+    <header class="logo-section" role="banner">
+      <div class="logo-container">
+        <img id="logo" src="atilimai-light.png" alt="Atılım Yapay Zeka Topluluğu - Atılım AI Community logo featuring modern design" class="logo" data-light-src="atilimai-light.png" data-dark-src="atilimai-dark.png" width="300" height="300">
+      </div>
+      <h1 class="title" data-tr="Atılım Yapay Zeka Topluluğu" data-en="Atılım AI Community">
+        Atılım Yapay Zeka Topluluğu
+      </h1>
+      <p class="subtitle" data-tr="Meraklı zihinleri bir araya getiriyoruz" data-en="Bringing curious minds together">
+        Meraklı zihinleri bir araya getiriyoruz
+      </p>
+    </header>
+
+    <!-- Social Media Buttons -->
+    <section class="social-section" aria-label="Social media and contact links">
+      <div class="social-buttons" role="navigation" aria-label="Social media navigation">
+        <a href="https://chat.whatsapp.com/HFygsOKHMTLJdKtljsxZ29" class="social-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+          <span class="icon" aria-hidden="true">📱</span>
+          <span class="label" data-tr="WhatsApp" data-en="WhatsApp">WhatsApp</span>
+        </a>
+        <a href="https://instagram.com/atilimai" class="social-btn instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram (opens in new tab)">
+          <span class="icon" aria-hidden="true">📷</span>
+          <span class="label" data-tr="Instagram" data-en="Instagram">Instagram</span>
+        </a>
+        <a href="https://www.linkedin.com/company/at%C4%B1l%C4%B1m-yapay-zeka-toplulu%C4%9Fu/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn (opens in new tab)">
+          <span class="icon" aria-hidden="true">💼</span>
+          <span class="label" data-tr="LinkedIn" data-en="LinkedIn">LinkedIn</span>
+        </a>
+        <a href="mailto:atilimyapayzeka@gmail.com" class="social-btn email" aria-label="Send us an email at atilimyapayzeka@gmail.com">
+          <span class="icon" aria-hidden="true">✉️</span>
+          <span class="label" data-tr="E-posta" data-en="Email">E-posta</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" aria-label="About the community">
+      <button class="about-toggle" aria-expanded="false" aria-controls="about-content" role="button">
+        <span data-tr="Hakkımızda" data-en="About Us">Hakkımızda</span>
+        <span class="chevron" aria-hidden="true">▼</span>
+      </button>
+      <div class="about-content" id="about-content" hidden role="region" aria-label="About us content">
+        <!-- Introduction -->
+        <p class="intro-text">
+          <span data-tr="Atılım Üniversitesi'nde artık Yapay Zeka Topluluğu var! 🎓🤖" 
+                data-en="Atılım University now has an AI Community! 🎓🤖">
+            Atılım Üniversitesi'nde artık Yapay Zeka Topluluğu var! 🎓🤖
+          </span>
+        </p>
+        
+        <!-- Mission -->
+        <p class="mission-text">
+          <span data-tr="Yapay zekâ, makine öğrenmesi, veri bilimi ve geleceğin teknolojilerine meraklıysan sen de bizimle birlikte öğrenmeye, üretmeye ve paylaşmaya hazır ol!" 
+                data-en="If you're curious about artificial intelligence, machine learning, data science, and the technologies of the future, get ready to learn, create, and share with us!">
+            Yapay zekâ, makine öğrenmesi, veri bilimi ve geleceğin teknolojilerine meraklıysan sen de bizimle birlikte öğrenmeye, üretmeye ve paylaşmaya hazır ol!
+          </span>
+        </p>
+        
+        <!-- What We Do -->
+        <h3 class="section-title">
+          <span data-tr="Neler Yapıyoruz?" data-en="What We Do?">Neler Yapıyoruz?</span>
+        </h3>
+        <ul class="activities-list">
+          <li>✨ <span data-tr="Atölyeler & Eğitimler" data-en="Workshops & Training">Atölyeler & Eğitimler</span></li>
+          <li>✨ <span data-tr="Proje geliştirme grupları" data-en="Project development groups">Proje geliştirme grupları</span></li>
+          <li>✨ <span data-tr="Yarışma hazırlıkları & yarışmalar" data-en="Competition preparation & contests">Yarışma hazırlıkları & yarışmalar</span></li>
+          <li>✨ <span data-tr="Akademik & sektörel konuşmacılar" data-en="Academic & industry speakers">Akademik & sektörel konuşmacılar</span></li>
+          <li>✨ <span data-tr="Networking fırsatları" data-en="Networking opportunities">Networking fırsatları</span></li>
+        </ul>
+        
+        <!-- Our Goal -->
+        <h3 class="section-title">
+          <span data-tr="Amacımız" data-en="Our Goal">Amacımız</span>
+        </h3>
+        <p class="goal-text">
+          <span data-tr="Öğrencilerimizin yapay zekâ, makine öğrenmesi ve veri bilimi alanlarında küresel ölçekte rekabet edebilecek düzeyde gelişmelerini sağlamak. Bunu yaparken öğrenmeyi eğlenceli, erişilebilir ve topluluk ruhunu besleyen bir deneyime dönüştürmek istiyoruz." 
+                data-en="To enable our students to develop themselves to a level where they can compete globally in artificial intelligence, machine learning, and data science. While doing this, we want to transform learning into an enjoyable, accessible experience that nurtures the spirit of community.">
+            Öğrencilerimizin yapay zekâ, makine öğrenmesi ve veri bilimi alanlarında küresel ölçekte rekabet edebilecek düzeyde gelişmelerini sağlamak. Bunu yaparken öğrenmeyi eğlenceli, erişilebilir ve topluluk ruhunu besleyen bir deneyime dönüştürmek istiyoruz.
+          </span>
+        </p>
+        
+        <!-- Community Values -->
+        <h3 class="section-title">
+          <span data-tr="Topluluğumuz" data-en="Our Community">Topluluğumuz</span>
+        </h3>
+        <p class="values-text">
+          <span data-tr="Disiplinlerarası katılıma açık olan topluluğumuz, farklı alanlardan meraklı öğrencileri aynı çatı altında buluşturuyor. Sektör içi şirketlerle yapacağımız iş birlikleri sayesinde staj, burs ve hackathon yarışmalarıyla üyelerimize kariyer fırsatları yaratmayı amaçlıyoruz." 
+                data-en="Our community, open to interdisciplinary participation, brings together curious students from different fields under one roof. Through collaborations with companies in the industry, we aim to create career opportunities for our members through internships, scholarships, and hackathon competitions.">
+            Disiplinlerarası katılıma açık olan topluluğumuz, farklı alanlardan meraklı öğrencileri aynı çatı altında buluşturuyor. Sektör içi şirketlerle yapacağımız iş birlikleri sayesinde staj, burs ve hackathon yarışmalarıyla üyelerimize kariyer fırsatları yaratmayı amaçlıyoruz.
+          </span>
+        </p>
+        
+        <!-- Call to Action -->
+        <p class="cta-text">
+          <span data-tr="Sen de geleceği şekillendiren bu topluluğun bir parçası ol!" 
+                data-en="Be part of this community shaping the future!">
+            Sen de geleceği şekillendiren bu topluluğun bir parçası ol!
+          </span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
