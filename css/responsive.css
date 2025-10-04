@@ -48,6 +48,11 @@ body {
   padding: var(--space-lg);
 }
 
+/* Liquid waves - smaller on mobile */
+.liquid-waves {
+  height: 30vh;
+}
+
 .about-toggle {
   min-height: 44px; /* Minimum touch target */
   padding: var(--space-md) var(--space-lg);
@@ -193,6 +198,11 @@ body {
   
   .subtitle {
     font-size: clamp(1.125rem, 2vw, 1.5rem);
+  }
+  
+  /* Liquid waves - larger on desktop */
+  .liquid-waves {
+    height: 45vh;
   }
 }
 
