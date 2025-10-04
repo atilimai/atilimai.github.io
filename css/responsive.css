@@ -62,15 +62,15 @@ body {
 }
 
 .language-toggle {
-  width: 80px; /* Exceeds 44px minimum */
-  height: 44px; /* Ensure minimum touch target */
+  width: 80px;
+  height: 40px;
   top: 16px;
   left: 16px;
 }
 
 .lang-btn {
-  min-width: 40px; /* Ensure adequate touch target */
-  min-height: 44px;
+  width: 38px;
+  height: 36px;
 }
 
 /* Typography adjustments for mobile */
@@ -221,10 +221,33 @@ body {
   }
   
   .language-toggle {
-    width: 72px;
-    height: 44px; /* Maintain minimum touch target */
+    width: 76px;
+    height: 38px;
     top: 12px;
     left: 12px;
+  }
+  
+  .lang-btn {
+    width: 36px;
+    height: 34px;
+    font-size: 0.7rem;
+  }
+  
+  .lang-btn[data-lang="tr"] {
+    left: 2px;
+  }
+  
+  .lang-btn[data-lang="en"] {
+    right: 2px;
+  }
+  
+  .lang-indicator {
+    width: 36px;
+    height: 34px;
+  }
+  
+  .lang-indicator.en {
+    transform: translateX(36px);
   }
   
   .theme-toggle .theme-icon {
@@ -334,10 +357,14 @@ body {
   /* Ensure all interactive elements meet minimum touch target size */
   .social-btn,
   .about-toggle,
-  .theme-toggle,
-  .lang-btn {
+  .theme-toggle {
     min-width: 44px;
     min-height: 44px;
+  }
+  
+  /* Language toggle is a group, so the container meets the minimum */
+  .language-toggle {
+    min-height: 40px;
   }
   
   /* Increase tap target padding */
