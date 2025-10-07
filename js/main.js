@@ -6,9 +6,9 @@ const themeIcon = document.querySelector('.theme-icon');
 const logo = document.getElementById('logo');
 const html = document.documentElement;
 
-// Initialize theme from localStorage or default to light
+// Initialize theme from localStorage or default to dark
 function initTheme() {
-  const savedTheme = localStorage.getItem('theme') || 'light';
+  const savedTheme = localStorage.getItem('theme') || 'dark';
   setTheme(savedTheme, false);
 }
 
